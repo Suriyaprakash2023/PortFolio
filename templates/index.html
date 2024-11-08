@@ -371,7 +371,7 @@
                                     <p>JavaScript</p>
                                 </div>
                             </div>
-                            <div class="design-skills-img-main flip_up">
+                            <div class="design-skills-img-main flip_up mt-3">
                                 <img src="{% static 'images/figma-img.png' %}" alt="figma-img">
                                 <div class="skill-counter-main">
                                     <p>94%</p>
@@ -544,12 +544,16 @@
                         <div class="portfolios-group-main">
                             <div>
                                 
-                                <div class="second-row-portfolio youtube zoom_in">
+                                <div class="second-row-portfolio zoom_in">
                                     <div class="image-container">
                                         <img src="{% static 'images/youtube-video-img.png' %}" alt="youtube-video-img">
                                         <div class="overlay">
-                                            <img src="{% static 'images/svg/icons-react.png' %}" alt="youtube-svg"
+                                            <img src="{% static 'images/svg/icons-django.png' %}" alt="youtube-svg"
                                                 class="vimeo-icon">
+                                            <span style="font-size:x-large;font-weight: 600;color: #fff;">+</span>
+                                                <img src="{% static 'images/svg/icons-react.png' %}" alt="youtube-svg"
+                                                class="vimeo-icon">
+
                                             <p class="overlay-text">Full Stack Development</p>
                                         </div>
                                     </div>
@@ -559,13 +563,13 @@
                             </div>
                             <div>
                                 
-                                <div class="second-row-portfolio youtube zoom_in">
+                                <div class="second-row-portfolio zoom_in">
                                     <div class="image-container">
                                         <img src="{% static 'images/youtube-video-img.png' %}" alt="youtube-video-img">
                                         <div class="overlay">
                                             <img src="{% static 'images/svg/icons-django1.png' %}" style="height:75px;width:75px;" alt="youtube-svg"
                                                 class="vimeo-icon">
-                                            <p class="overlay-text">Food App Development</p>
+                                            <p class="overlay-text">Full Stack Development</p>
                                         </div>
                                     </div>
                                     <p class="Corporate">Food App Development</p>
@@ -576,13 +580,13 @@
 
                             <div>
                                 
-                                <div class="second-row-portfolio youtube zoom_in">
+                                <div class="second-row-portfolio zoom_in">
                                     <div class="image-container">
                                         <img src="{% static 'images/youtube-video-img.png' %}" alt="youtube-video-img">
                                         <div class="overlay">
                                             <img src="{% static 'images/svg/icons8-flask-500.png' %}" style="height:95px;width:95px;" alt="youtube-svg"
                                                 class="vimeo-icon">
-                                            <p class="overlay-text">Food App Development</p>
+                                            <p class="overlay-text">Full Stack Development</p>
                                         </div>
                                     </div>
                                     <p class="Corporate">Food App Development</p>
@@ -591,13 +595,13 @@
                             </div>
                             <div>
                                 
-                                <div class="second-row-portfolio youtube zoom_in">
+                                <div class="second-row-portfolio zoom_in">
                                     <div class="image-container">
                                         <img src="{% static 'images/youtube-video-img.png' %}" alt="youtube-video-img">
                                         <div class="overlay">
-                                            <img src="{% static 'images/svg/youtube-svg.svg' %}" alt="youtube-svg"
+                                            <img src="{% static 'images/svg/icons-javascript.png' %}" alt="youtube-svg"
                                                 class="vimeo-icon">
-                                            <p class="overlay-text">Food App Development</p>
+                                            <p class="overlay-text">Full Stack Development</p>
                                         </div>
                                     </div>
                                     <p class="Corporate">Food App Development</p>
@@ -980,7 +984,7 @@
                                 </div>
                                 <div>
                                     <p class="contact-email-text">EMAIL</p>
-                                    <p class="contact-email"><a href="mailto:hello@biogi.com">sksuriyakannan@gmail.com</a></p>
+                                    <p class="contact-email"><a href="sksuriyakannan@gmail.com">sksuriyakannan@gmail.com</a></p>
                                 </div>
                             </div>
                             <div class="contact-box-main zoom_in">
@@ -998,31 +1002,32 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-container">
-                            <div class="form">
-                                <label for="name" class="form__label">NAME</label>
-                                <input type="text" class="form__input" placeholder="Your name" id="name" required
-                                    autocomplete="off">
+                        <form id="contact-form" method="POST">
+                            <!-- CSRF token (for Django security) -->
+                            {% csrf_token %}
+                            
+                            <div class="form-container">
+                                <div class="form">
+                                    <label for="name" class="form__label">NAME</label>
+                                    <input type="text" class="form__input" placeholder="Your name" id="name" required autocomplete="off">
+                                </div>
+                                <div class="form">
+                                    <label for="email" class="form__label">EMAIL</label>
+                                    <input type="email" class="form__input" placeholder="Your email" id="email" required autocomplete="off">
+                                </div>
+                            </div>
+                            <div class="form subject-input-main">
+                                <label for="subject" class="form__label">SUBJECT</label>
+                                <input type="text" class="form__input" placeholder="Your subject" id="subject" required autocomplete="off">
                             </div>
                             <div class="form">
-                                <label for="email" class="form__label">EMAIL</label>
-                                <input type="email" class="form__input" placeholder="Your email" id="email" required
-                                    autocomplete="off">
+                                <label for="message" class="form__label">MESSAGE</label>
+                                <textarea class="form__input" placeholder="Write your text..." id="message" required autocomplete="off"></textarea>
                             </div>
-                        </div>
-                        <div class="form subject-input-main">
-                            <label for="name" class="form__label">SUBJECT</label>
-                            <input type="text" class="form__input" placeholder="Your subject" id="phone" required
-                                autocomplete="off">
-                        </div>
-                        <div class="form">
-                            <label for="name" class="form__label">MESSAGE</label>
-                            <input type="text" class="form__input" placeholder="Write your text..." id="subject"
-                                required autocomplete="off">
-                        </div>
-                        <div class="wrapper blog-btn">
-                            <a class="btn-hover" href="#">Submit Now</a>
-                        </div>
+                            <div class="wrapper blog-btn">
+                                <button type="submit" class="btn btn-hover">Submit Now</button>
+                            </div>
+                        </form>
                         <iframe class="mt-4" src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d425.44012407724347!2d80.17990212348518!3d13.030203638722316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d13.030121!2d80.17993059999999!4m3!3m2!1d13.0301265!2d80.17990499999999!5e1!3m2!1sen!2sin!4v1730368493193!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 <!--                        <iframe class="map-iframe"-->
@@ -1038,6 +1043,44 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('contact-form');
+            
+            form.addEventListener('submit', function (e) {
+                e.preventDefault(); // Prevent default form submission
+        
+                // Collect form data
+                const formData = new FormData(form);
+        
+                // Send the data using the Fetch API
+                fetch('/contect/', {
+                    method: 'POST',
+                    body: formData, // Send the form data
+                    headers: {
+                        'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value // CSRF token
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'success') {
+                        alert('Thank you for your message!');
+                        form.reset(); // Reset the form after submission
+                    } else {
+                        alert('Oops! Something went wrong.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred while submitting your message.');
+                });
+            });
+        });
+        </script>
+
+
+
     <script src="{% static 'javascript/jquery.min.js' %}"></script>
     <script src="{% static 'javascript/fancybox.min.js' %}"></script>
     <script src="{% static 'javascript/magnific-popup.min.js' %}"></script>
