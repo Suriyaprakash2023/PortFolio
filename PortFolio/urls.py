@@ -18,12 +18,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
-from .views import index,submit_contact_form
+from .views import index,submit_contact_form,react
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index,name='index'),
-    path('contect/',submit_contact_form,name='contect'),
+    path('/submit_contact_form',submit_contact_form,name='submit_contact_form'),
+    path('react',react,name='react'),
 
 ]
 if settings.DEBUG:

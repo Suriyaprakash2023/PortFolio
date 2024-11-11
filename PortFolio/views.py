@@ -4,9 +4,9 @@ from django.http import JsonResponse
 # from .models import Contact
 
 def index(request):
-  return render(request,'index.html') #Index.html have the orginal code
+  return render(request,'index.html')
 
-@csrf_exempt  # If you are testing without CSRF protection. For production, manage CSRF properly.
+@csrf_exempt
 def submit_contact_form(request):
     if request.method == 'POST':
         # Retrieve data from the POST request
@@ -23,3 +23,15 @@ def submit_contact_form(request):
         return JsonResponse({'status': 'success', 'message': 'Contact form submitted successfully'})
 
     return JsonResponse({'status': 'error', 'message': 'Invalid request method'}, status=400)
+
+def react(request):
+    return render(request,'react.html')
+
+def django(request):
+    return render(request,'django.html')
+
+def flask(request):
+    return render(request,'flask.html')
+
+def js(request):
+    return render(request,'js.html')
