@@ -15,11 +15,47 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="{% static 'css/media_query.css' %}">
 
-   
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Font Awesome CDN link (Free version) -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<style>
+    @media (max-width: 991px) {
+    
+    
+        .blog-img-section {
+        
+            display: flex !important;
+            justify-content: center !important;
+        }
 
+        .blog-img-section img{
+        
+          width:500px !important;
+        }
+
+
+    }
+
+    @media (max-width: 426px) {
+    
+        .blog-img-section img{
+        
+          width:330px !important;
+        }
+    }
+        @media (max-width: 320px) {
+    
+            .blog-img-section img{
+            
+              width:280px !important;
+            }
+
+    }
+
+
+    </style>
+    
 </head>
 <body>
     <div class="site_contain">
@@ -54,34 +90,38 @@
                                 <!-- <i class="fa-brands fa-linkedin text-white" ></i> -->
                                 <img src="{% static 'images/svg/icons-linkedin.png' %}" style="width: 60%; max-width: 50px;"  alt="drribale-svg">
                             </a>
-                           
+
                         </div>
                     </div>
                     <div class="menu-list-main">
                         <ul>
-                            <li class="active-menu-action">
-                                <a class="fade_right" href="#home">
+                            <li class="active-menu-action" onclick="redirectToHome()">
+                                <a class="" href="{% url 'index' %}">
                                     <img src="{% static 'images/svg/home-svg.svg' %}" alt="home-svg">Home
                                 </a>
                             </li>
-                            <li class="active-menu-action">
+                            
+                            
+                            <li class="active-menu-action" onclick="redirectToAbout()">
                                 <a class="fade_right" href="#about">
-                                    <img src="{% static 'images/svg/about-svg.svg' %}" alt="home-svg">About
+                                    <img src="{% static 'images/svg/about-svg.svg' %}" alt="about-svg">About
                                 </a>
                             </li>
-                            <li class="active-menu-action">
+                            
+                           
+                            <li class="active-menu-action" onclick="redirectToResume()">
                                 <a class="fade_right" href="#resume">
                                     <img src="{% static 'images/svg/resume-svg.svg' %}" alt="home-svg">Experience
                                 </a>
                             </li>
-                            
-                            <li class="active-menu-action">
+
+                            <li class="active-menu-action" onclick="redirectToPortfolio()">
                                 <a class="fade_right" href="#portfolio">
                                     <img src="{% static 'images/svg/portfolio-svg.svg' %}" alt="home-svg">Projects
                                 </a>
                             </li>
-                           
-                            <li class="active-menu-action" id="contact-line">
+
+                            <li class="active-menu-action" id="contact-line" onclick="redirectToContact()">
                                 <a class="fade_right" href="#contact">
                                     <img src="{% static 'images/svg/contact-svg.svg' %}" alt="home-svg">Contact
                                 </a>
@@ -107,8 +147,51 @@
                 </div>
                 <!-- ====================================== Side Menu End ===================================== -->
                 <div class="main-containe" data-bs-spy="scroll">
+
+
+                    <!-- ====================================== Section Blogs ===================================== -->
+                    <section class="blog-section" id="blog">
+                        <div class="heading-container">
+                            <h2 class="section-heading-text coding-skill-text fade_up">Flask Projects.</h2>
+                            <div class="line"></div>
+                           
+                        </div>
+                        <div class="blog-main zoom_in">
+                            
+                            <div class="blog-img-section">
+                                <img  src="{% static 'images/screen.png' %}" alt="flower" style="height:250px;width:330px;border-radius:20px;">
+                                
+                            </div>
+                            <div>
+                                <h3 class="post-date">20 April 2025 | Flask </h3>
+                                <h4 class="steps">Tourm</h4>
+                                <h5 style="color:#909090;font-size:medium;">I’m developing a tour booking app using Flask, where users can book tours to various destinations. The app allows users to browse destinations, select dates, and complete bookings. The admin dashboard displays all booking details, enabling efficient management and monitoring of bookings and user activity.
+                                </h5>
+                                <div class="wrapper blog-btn">
+                                    <a class="btn-hover me-3" href="#blog-popup">View Live
+                                        <svg class="btn-arrow-right" xmlns="http://www.w3.org/2000/svg" width="32"
+                                            height="32" viewBox="0 0 32 32" fill="none">
+                                            <path
+                                                d="M21.5621 14.6665L14.4101 7.51452L16.2957 5.62891L26.6666 15.9999L16.2957 26.3707L14.4101 24.4851L21.5621 17.3332H5.33331V14.6665H21.5621Z"
+                                                fill="#0F141C" />
+                                        </svg>
+                                    </a>
+                                    <a class="btn-hover text-dark" href="#blog-popup">View Git
+                                        <img src="{% static 'images/svg/git.svg' %}" class="ms-2 text-dark" style="height: 92%;color:#fff !important;">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                       
+                      
+                    </section>
+                    <!-- ====================================== Section Blogs End ===================================== -->
+
+
+
                     <!-- ====================================== Section One ===================================== -->
-                    <section class="section-one overflow-hidden" id="home">
+                    <section class="section-one overflow-hidden" id="home" style="display:none;">
                         <div class="row">
                             <div class="col-xxl-6 col-lg-6">
                                 <h2 class="jessica-main-text zoom_in">### <span>###</span></h2>
@@ -138,7 +221,7 @@
                                             alt="clients-img2">
                                         <img class="client-img client-img3" src="{% static 'images/clients-img3.jpg' %}"
                                             alt="clients-img3">
-                                        <img class="client-img client-img4" style="height:50px;width:50px;" src="{% static 'images/django-mini.png' %}"
+                                        <img class="client-img client-img4" src="{% static 'images/clients-img4.jpg' %}"
                                             alt="clients-img4">
                                         <p class="worked-more worked-more2"> 100+ Clients</p>
                                     </div>
@@ -148,7 +231,7 @@
                     </section>
                     <!-- ====================================== Section one End ===================================== -->
                     <!-- ====================================== Section Marquee ===================================== -->
-                    <section class="Marquee-main overflow-hidden">
+                    <section class="Marquee-main overflow-hidden" style="display:none;">
                         <h3 class="fade_up">Trusted by World Leading Brands</h3>
                         <div class="logos logos2">
                             <div class="logos-slide">
@@ -186,16 +269,18 @@
                     </section>
                     <!-- ====================================== Section Marquee End ===================================== -->
                     <!-- ====================================== Section About ===================================== -->
-                    <section class="About-section jos" id="about">
+                    <section class="About-section jos" id="about" style="display:none;">
                         <div class="heading-container">
                             <h2 class="section-heading-text about-me fade_up">About Me.</h2>
                             <div class="line"></div>
                         </div>
-                        <p class="section-sub-text about-sub-text zoom_in">Hi, my name is <span style='color:#FF759C;'>Suriya Prakash</span> I am a passionate Python developer currently working at Thaagma Foundation. With a solid foundation in web development, I specialize in Django, REST API, Flask, React, MySQL, and PostgreSQL. Over the past two years, I have gained hands-on experience in creating efficient and scalable web applications.
-
-                            Apart from my technical skills, I enjoy solving complex problems, collaborating with teams, and continuously learning new technologies to stay updated in the ever-evolving tech landscape. I'm always eager to take on new challenges and expand my expertise in Python development.
-                            
-                            You can find most of my work and projects on my .<span style='color:#FF759C;'><a href="#portfolio" style='color:#FF759C;'> Projects</span>
+                        <p class="section-sub-text about-sub-text zoom_in">Hi, my name is <span>Jessica Biogi</span> and
+                            I began using WordPress when first began. I've spent most of my waking hours for the last
+                            ten years designing, programming and operating WordPress sites go beyond with exclusive
+                            designer. Apart from this I love to travel, mentor designers, review design portfolios &
+                            read books on everything related to design. I have also given design talks in various
+                            educational institutions. So I love creating creative content, and you can find most of my
+                            works here.
                         </p>
                         <div class="about-detail-main">
                             <p class="about-detail">Name</p>
@@ -222,7 +307,7 @@
                             <p class="about-detail">Freelance</p>
                             <p class="about-detail-info">Available</p>
                         </div>
-                        
+
                         <div class="about-detail-main">
                             <p class="about-detail">Language</p>
                             <p class="about-detail-info">English, Tamil</p>
@@ -230,7 +315,7 @@
                     </section>
                     <!-- ====================================== Section About End ===================================== -->
                     <!-- ====================================== Section Education Experience ===================================== -->
-                    <section class="education-experience" id="resume">
+                    <section class="education-experience" id="resume" style="display:none;">
                         <div class="row">
                             <div class="col-xxl-6 col-lg-6">
                                 <div class="heading-container">
@@ -244,8 +329,8 @@
                                         </div>
                                     </div>
                                     <div class="small_yellow_border_main">
-                                        <p class="bachelor">Master of Computer Applications</p>
-                                        <p class="cursus university"> University of Madras / 2024 - Present </p>
+                                        <p class="bachelor">Master in Design</p>
+                                        <p class="cursus university">Cambridge University / 2010 - 2014</p>
                                         <p class="cursus">Eu nulla at mauris cursus consectetur posuere iaculis ipsum
                                             neque. Morbi felis pellentesque ligula sed dictumst imperdiet nunc
                                             vulputate.
@@ -260,13 +345,13 @@
                                     </div>
                                     <div class="small_yellow_border_main">
                                         <p class="bachelor">Bachelor in Science</p>
-                                        <p class="cursus university">Cambridge University / 2016 - 2019</p>
+                                        <p class="cursus university">Cambridge University / 2014 - 2016</p>
                                         <p class="cursus">Porttitor euismod at semper ut massa. Lorem varius magna
                                             volutpat nunc. Et faucibus scelerisque donec augue eleifenda morbi.
                                         </p>
                                     </div>
                                 </div>
-                                
+
                             </div>
                             <div class="col-xxl-6 col-lg-6">
                                 <div class="heading-container">
@@ -280,8 +365,8 @@
                                         </div>
                                     </div>
                                     <div class="small_yellow_border_main">
-                                        <p class="bachelor">Django & React DEVELOPMENT</p>
-                                        <p class="cursus university">Thaagam / 2024 - Current</p>
+                                        <p class="bachelor">LEAD DESIGN & DEVELOPMENT</p>
+                                        <p class="cursus university">Envato / 2020 - Current</p>
                                         <p class="cursus">Ipsum erat duis leo lectus tellus neque dictumst.
                                             Dignissim tortor quis nisl mi lectus. Massa facilisis ac eget fermentum
                                             vitae.
@@ -295,25 +380,25 @@
                                         </div>
                                     </div>
                                     <div class="small_yellow_border_main">
-                                        <p class="bachelor">Intern</p>
-                                        <p class="cursus university">Creative Tecnology / 2023- 2024</p>
+                                        <p class="bachelor">SENIOR DESIGN & DEVELOPEMNT</p>
+                                        <p class="cursus university">Apple / 2019 - 2020</p>
                                         <p class="cursus">Congue dolor gravida eu tristique netus posuere dolor.
                                             Penatibus imperdiet egestas ut sit scelerisque sapien a lor sjsa.
                                         </p>
                                     </div>
                                 </div>
-                                
+
                             </div>
                         </div>
                     </section>
                     <!-- ====================================== Section Education Experience End ===================================== -->
                     <!-- ====================================== Section Coding Skill ===================================== -->
-                    <section class="coding-skill-section">
-                        
+                    <section class="coding-skill-section" style="display:none;">
+
                     </section>
                     <!-- ====================================== Section Coding Skill End ===================================== -->
                     <!-- ====================================== Section Design Skill ===================================== -->
-                    <section class="design-skill-section">
+                    <section class="design-skill-section" style="display:none;">
                         <div class="heading-container">
                             <h2 class="section-heading-text design-skill-text fade_up">Skills.</h2>
                             <div class="line"></div>
@@ -379,7 +464,7 @@
 
                             <div class="design-skills-img-main photoshop flip_up mt-3">
                                 <img src="{% static 'images/mysql-logo.png' %}" style="height:49px;width:49px;"  alt="figma-img">
-                                <div class="skill-counter-main photoshop-text">   
+                                <div class="skill-counter-main photoshop-text">
                                     <p>94%</p>
                                     <p>My SQL</p>
                                 </div>
@@ -397,7 +482,7 @@
                     </section>
                     <!-- ====================================== Section Coding Skill End ===================================== -->
                     <!-- ====================================== Section Award ===================================== -->
-                    <section class="awards-section overflow-hidden">
+                    <section class="awards-section overflow-hidden" style="display:none;">
                         <div class="heading-container">
                             <h2 class="section-heading-text coding-skill-text fade_up">Awards.</h2>
                             <div class="line"></div>
@@ -498,9 +583,9 @@
                         </div>
                     </section>
                     <!-- ====================================== Section Award End ===================================== -->
-                    
+
                     <!-- ====================================== Section Services Pop Up ===================================== -->
-                    <div id="services-popup" class="popup-container">
+                    <div id="services-popup" class="popup-container" style="display:none;">
                         <div class="popup-content popup-content2">
                             <a href="#" class="close">&times;</a>
                             <h2 class="simple-steps">UI/UX DESIGN</h2>
@@ -534,7 +619,7 @@
                     </div>
                     <!-- ====================================== Services PopUp End ===================================== -->
                     <!-- ====================================== Section Portfolio ===================================== -->
-                    <section class="portfolio-section" id="portfolio">
+                    <section class="portfolio-section" id="portfolio" style="display:none;">
                         <div class="heading-container">
                             <h2 class="section-heading-text coding-skill-text fade_up">Projects.</h2>
                             <div class="line"></div>
@@ -542,74 +627,71 @@
                         <div class="portfolios-group-main">
                             <div>
                                 <a href="{% url 'react' %}">
-                                
-                                    <div class="second-row-portfolio zoom_in">
-                                        <div class="image-container">
-                                            <img src="{% static 'images/youtube-video-img.png' %}" alt="youtube-video-img" style="width:320px;height:320px;">
-                                            <div class="overlay">
-                                                <img src="{% static 'images/svg/icons-django.png' %}" alt="youtube-svg"
-                                                    class="vimeo-icon">
-                                                <span style="font-size:x-large;font-weight: 600;color: #fff;">+</span>
-                                                    <img src="{% static 'images/svg/icons-react.png' %}" alt="youtube-svg"
-                                                    class="vimeo-icon">
 
-                                                <p class="overlay-text">React Development</p>
-                                            </div>
+                                <div class="second-row-portfolio zoom_in">
+                                    <div class="image-container">
+                                        <img src="{% static 'images/youtube-video-img.png' %}" alt="youtube-video-img">
+                                        <div class="overlay">
+                                            <img src="{% static 'images/svg/icons-django.png' %}" alt="youtube-svg"
+                                                class="vimeo-icon">
+                                            <span style="font-size:x-large;font-weight: 600;color: #fff;">+</span>
+                                                <img src="{% static 'images/svg/icons-react.png' %}" alt="youtube-svg"
+                                                class="vimeo-icon">
+
+                                            <p class="overlay-text">Full Stack Development</p>
                                         </div>
-                                    
-                                        <p class="Corporate-sub text-white">Django + DRF + React Projects</p>
                                     </div>
-                                </a>
+                                    <p class="Corporate">Food App Development</p>
+                                    <p class="Corporate-sub">Django + DRF + React</p>
+                                </div>
+                                    </a>
                             </div>
                             <div>
-                                <a href="{% url 'django' %}">
-                                    <div class="second-row-portfolio zoom_in">
 
-                                        <div class="image-container">
-                                            <img src="{% static 'images/real-estate3.png' %}" alt="youtube-video-img" style="width:320px;height:320px;">
-                                            <div class="overlay">
-                                                <img src="{% static 'images/svg/icons-django1.png' %}" style="height:75px;width:75px;" alt="youtube-svg"
-                                                    class="vimeo-icon">
-                                                <p class="overlay-text">Django Development</p>
-                                            </div>
+                                <div class="second-row-portfolio zoom_in">
+                                    <div class="image-container">
+                                        <img src="{% static 'images/youtube-video-img.png' %}" alt="youtube-video-img">
+                                        <div class="overlay">
+                                            <img src="{% static 'images/svg/icons-django1.png' %}" style="height:75px;width:75px;" alt="youtube-svg"
+                                                class="vimeo-icon">
+                                            <p class="overlay-text">Full Stack Development</p>
                                         </div>
-                                    
-                                        <p class="Corporate-sub text-white"> Django Projects</p>
                                     </div>
-                                </a>
+                                    <p class="Corporate">Food App Development</p>
+                                    <p class="Corporate-sub"> Django </p>
+                                </div>
                             </div>
-                            
+
 
                             <div>
-                                <a href="{% url 'flask' %}">
-                                    <div class="second-row-portfolio zoom_in">
-                                        <div class="image-container">
-                                            <img src="{% static 'images/tour2.jpg' %}" alt="youtube-video-img" style="width:320px;height:320px;">
-                                            <div class="overlay">
-                                                <img src="{% static 'images/svg/icons8-flask-500.png' %}" style="height:95px;width:95px;" alt="youtube-svg"
-                                                    class="vimeo-icon">
-                                                <p class="overlay-text">Flask Development</p>
-                                            </div>
+
+                                <div class="second-row-portfolio zoom_in">
+                                    <div class="image-container">
+                                        <img src="{% static 'images/youtube-video-img.png' %}" alt="youtube-video-img">
+                                        <div class="overlay">
+                                            <img src="{% static 'images/svg/icons8-flask-500.png' %}" style="height:95px;width:95px;" alt="youtube-svg"
+                                                class="vimeo-icon">
+                                            <p class="overlay-text">Full Stack Development</p>
                                         </div>
-                                        <p class="Corporate-sub text-white"> Flask Projects</p>
                                     </div>
-                                </a>
+                                    <p class="Corporate">Food App Development</p>
+                                    <p class="Corporate-sub"> Flask </p>
+                                </div>
                             </div>
                             <div>
-                                <a href="{% url 'js' %}">
-                                    <div class="second-row-portfolio zoom_in">
-                                        <div class="image-container">
-                                            <img src="{% static 'images/js1.jpg' %}" alt="youtube-video-img" style="width:320px;height:320px;">
-                                            <div class="overlay">
-                                                <img src="{% static 'images/svg/icons-javascript.png' %}" alt="youtube-svg"
-                                                    class="vimeo-icon">
-                                                <p class="overlay-text">JavaScript Development</p>
-                                            </div>
+
+                                <div class="second-row-portfolio zoom_in">
+                                    <div class="image-container">
+                                        <img src="{% static 'images/youtube-video-img.png' %}" alt="youtube-video-img">
+                                        <div class="overlay">
+                                            <img src="{% static 'images/svg/icons-javascript.png' %}" alt="youtube-svg"
+                                                class="vimeo-icon">
+                                            <p class="overlay-text">Full Stack Development</p>
                                         </div>
-                                        
-                                        <p class="Corporate-sub text-white">HTML + Css + Java Script Projects </p>
                                     </div>
-                                </a>
+                                    <p class="Corporate">Food App Development</p>
+                                    <p class="Corporate-sub">youtube video</p>
+                                </div>
                             </div>
                         </div>
                         <div class="wrapper view-all-btn zoom_in">
@@ -678,7 +760,7 @@
                     </div>
                     <!-- ====================================== Content Pop up End ===================================== -->
                     <!-- ======================================= gallery ================================== -->
-                    <div id="popup2" class="popup-container popup-style">
+                    <div id="popup2" class="popup-container popup-style" style="display:none;">
                         <div class="popup-content popup-content-gallery">
                             <a href="#pop" class="close">&times;</a>
                             <main class="main">
@@ -841,7 +923,7 @@
                         </div>
                     </div>
                     <!-- ======================================= Gallery End================================== -->
-                   
+
                   <!-- ====================================== Blogs PopUp ===================================== -->
                     <div id="blog-popup" class="popup-container">
                         <div class="popup-content popup-content2">
@@ -969,73 +1051,9 @@
                     </div>
                     <!-- ====================================== Blogs PopUp End ===================================== -->
                     <!-- ====================================== Section Contact ===================================== -->
-                    <section class="contact-section" id="contact">
-                        <div class="heading-container">
-                            <h2 class="section-heading-text coding-skill-text fade_up">Get In Touch.</h2>
-                            <div class="line"></div>
-                        </div>
-
-                        <div id='alertmessage'> 
-
-                        </div>
-
-                        <p class="services-product-text fade_up">TAKE A COFFEE & CHAT WITH ME</p>
-                        <div class="main-box-contact">
-                            <div class="contact-box-main zoom_in">
-                                <div class="mobile-icon-main">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
-                                        fill="none">
-                                        <path
-                                            d="M6 6H42C43.1046 6 44 6.89544 44 8V40C44 41.1046 43.1046 42 42 42H6C4.89544 42 4 41.1046 4 40V8C4 6.89544 4.89544 6 6 6ZM24.1212 23.3658L11.2944 12.4754L8.70556 15.5246L24.1462 28.6342L39.3088 15.5123L36.6912 12.4877L24.1212 23.3658Z"
-                                            fill="white" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p class="contact-email-text">EMAIL</p>
-                                    <p class="contact-email"><a href="sksuriyakannan@gmail.com">sksuriyakannan@gmail.com</a></p>
-                                </div>
-                            </div>
-                            <div class="contact-box-main zoom_in">
-                                <div class="mobile-icon-main">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
-                                        fill="none">
-                                        <path
-                                            d="M14 4H36C37.1046 4 38 4.89544 38 6V42C38 43.1046 37.1046 44 36 44H12C10.8954 44 10 43.1046 10 42V0H14V4ZM14 8V18H34V8H14Z"
-                                            fill="white" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p class="contact-email-text">PHONE</p>
-                                    <p class="contact-email"><a href="tel:+12345678899">+91 9514152359</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <form id="contact-form" method="POST">
-                            <!-- CSRF token (for Django security) -->
-                            {% csrf_token %}
-                            
-                            <div class="form-container">
-                                <div class="form">
-                                    <label for="name" class="form__label">NAME</label>
-                                    <input type="text" class="form__input" placeholder="Your name" id="name" name='name' required autocomplete="off">
-                                </div>
-                                <div class="form">
-                                    <label for="email" class="form__label">EMAIL</label>
-                                    <input type="email" class="form__input" placeholder="Your email" id="email" name='email' required autocomplete="off">
-                                </div>
-                            </div>
-                            <div class="form subject-input-main">
-                                <label for="subject" class="form__label">SUBJECT</label>
-                                <input type="text" class="form__input" placeholder="Your subject" id="subject" name='subject' required autocomplete="off">
-                            </div>
-                            <div class="form">
-                                <label for="message" class="form__label">MESSAGE</label>
-                                <textarea class="form__input" placeholder="Write your text..." id="message" name='message' required autocomplete="off"></textarea>
-                            </div>
-                            <div class="wrapper blog-btn">
-                                <button type="submit" class="btn btn-hover">Submit Now</button>
-                            </div>
-                        </form>
+                    <section class="contact-section" id="contact" style="display:none;">
+                        
+                    
                         <iframe class="mt-4" src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d425.44012407724347!2d80.17990212348518!3d13.030203638722316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d13.030121!2d80.17993059999999!4m3!3m2!1d13.0301265!2d80.17990499999999!5e1!3m2!1sen!2sin!4v1730368493193!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 <!--                        <iframe class="map-iframe"-->
@@ -1052,74 +1070,30 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('contact-form');
-            const alertMessageDiv = document.getElementById('alertmessage'); // Reference the alert message div
-            
-            form.addEventListener('submit', function (e) {
-                e.preventDefault(); // Prevent default form submission
-        
-                // Collect form data
-                const formData = new FormData(form);
-        
-                // Send the data using the Fetch API
-                fetch('/submit_contact_form/', {
-                    method: 'POST',
-                    body: formData, // Send the form data
-                    headers: {
-                        'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value // CSRF token
-                    }
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.status === 'success') {
-                        // Show success message
-                        alertMessageDiv.innerHTML = `
-                            <div class="alert alert-success mt-3" role="alert" style="background: #00CC97;border:none;color:white;"> 
-                                Your Message Submitted Successfully...!
-                            </div>
-                        `;
-        
-                        // Clear the message after 5 seconds
-                        setTimeout(() => {
-                            alertMessageDiv.innerHTML = ''; // Clear the content of the div
-                        }, 5000);
-        
-                        form.reset(); // Reset the form
-                    } else {
-                        // Show error message
-                        alertMessageDiv.innerHTML = `
-                            <div class="alert alert-danger mt-3" role="alert" style="background: #FF4D4D;border:none;color:white;"> 
-                                Something Went Wrong...!
-                            </div>
-                        `;
-        
-                        // Clear the message after 5 seconds
-                        setTimeout(() => {
-                            alertMessageDiv.innerHTML = ''; // Clear the content of the div
-                        }, 5000);
-                    }
-                })
-                .catch(error => {
-                    // Show error message in case of a fetch error
-                    alertMessageDiv.innerHTML = `
-                        <div class="alert alert-danger mt-3" role="alert" style="background: #FF4D4D;border:none;color:white;"> 
-                            Something Went Wrong...!
-                        </div>
-                    `;
-        
-                    // Clear the message after 5 seconds
-                    setTimeout(() => {
-                        alertMessageDiv.innerHTML = ''; // Clear the content of the div
-                    }, 5000);
-                });
-            });
-        });
-        
+
+       
+        <script>
+            function redirectToAbout() {
+                // Redirects to the index page and automatically scrolls to the #about section
+                window.location.href = "{% url 'index' %}#about";
+            }
+            function redirectToHome() {
+                // Trigger click on the <a> inside the <li> to navigate
+                window.location.href = "{% url 'index' %}";
+            }
+            function redirectToResume() {
+                // Trigger click on the <a> inside the <li> to navigate
+                window.location.href = "{% url 'index' %}#resume";
+            }
+            function redirectToPortfolio() {
+                // Trigger click on the <a> inside the <li> to navigate
+                window.location.href = "{% url 'index' %}#portfolio";
+            }
+            function redirectToContact() {
+                // Trigger click on the <a> inside the <li> to navigate
+                window.location.href = "{% url 'index' %}#contact";
+            }
         </script>
-
-
 
     <script src="{% static 'javascript/jquery.min.js' %}"></script>
     <script src="{% static 'javascript/fancybox.min.js' %}"></script>

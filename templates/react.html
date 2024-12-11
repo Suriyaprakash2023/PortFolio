@@ -21,6 +21,43 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
 </head>
+<style>
+    @media (max-width: 991px) {
+    
+    
+        .blog-img-section {
+        
+            display: flex !important;
+            justify-content: center !important;
+        }
+
+        .blog-img-section img{
+        
+          width:500px !important;
+        }
+
+
+    }
+
+    @media (max-width: 426px) {
+    
+        .blog-img-section img{
+        
+          width:330px !important;
+        }
+    }
+        @media (max-width: 320px) {
+    
+            .blog-img-section img{
+            
+              width:280px !important;
+            }
+
+    }
+
+
+    </style>
+
 <body>
     <div class="site_contain">
         <!-- ====================================== Preloader ===================================== -->
@@ -59,30 +96,33 @@
                     </div>
                     <div class="menu-list-main">
                         <ul>
-                            <li class="">
-                               <a class="fade_right" href="{% url 'index' %} #home">
+                            <li class="active-menu-action" onclick="redirectToHome()">
+                                <a class="" href="{% url 'index' %}">
                                     <img src="{% static 'images/svg/home-svg.svg' %}" alt="home-svg">Home
                                 </a>
-
                             </li>
-                            <li class="active-menu-action">
+                            
+                            
+                            <li class="active-menu-action" onclick="redirectToAbout()">
                                 <a class="fade_right" href="#about">
-                                    <img src="{% static 'images/svg/about-svg.svg' %}" alt="home-svg">About
+                                    <img src="{% static 'images/svg/about-svg.svg' %}" alt="about-svg">About
                                 </a>
                             </li>
-                            <li class="active-menu-action">
+                            
+                           
+                            <li class="active-menu-action" onclick="redirectToResume()">
                                 <a class="fade_right" href="#resume">
                                     <img src="{% static 'images/svg/resume-svg.svg' %}" alt="home-svg">Experience
                                 </a>
                             </li>
 
-                            <li class="active-menu-action">
+                            <li class="active-menu-action" onclick="redirectToPortfolio()">
                                 <a class="fade_right" href="#portfolio">
                                     <img src="{% static 'images/svg/portfolio-svg.svg' %}" alt="home-svg">Projects
                                 </a>
                             </li>
 
-                            <li class="active-menu-action" id="contact-line">
+                            <li class="active-menu-action" id="contact-line" onclick="redirectToContact()">
                                 <a class="fade_right" href="#contact">
                                     <img src="{% static 'images/svg/contact-svg.svg' %}" alt="home-svg">Contact
                                 </a>
@@ -113,45 +153,49 @@
                     <!-- ====================================== Section Blogs ===================================== -->
                     <section class="blog-section" id="blog">
                         <div class="heading-container">
-                            <h2 class="section-heading-text coding-skill-text fade_up">Blogs.</h2>
+                            <h2 class="section-heading-text coding-skill-text fade_up">React Projects.</h2>
                             <div class="line"></div>
+                           
                         </div>
                         <div class="blog-main zoom_in">
+                            
                             <div class="blog-img-section">
-                                <p class="blog-date">20<span>APR</span></p>
+                                <img  src="{% static 'images/real-estate3.png' %}" alt="flower" style="height:250px;width:500px;border-radius:20px;">
+                                
                             </div>
                             <div>
-                                <h3 class="post-date">20 April 2025 | web development</h3>
-                                <h4 class="steps">Become a Frontend Developer in 5 Simple Steps</h4>
-                                <h5 class="est">Est a quis ipsum et arcu. Sit eros leo enim sed vivamus. Nulla et eget
-                                    commodo mus suspendisse imperdiet. Rhoncus commodo duis nulla habitasse viverra
-                                    turpis metus in. Tellus nam vivamus et in commodo bibendum.
+                                <h3 class="post-date">20 April 2025 | React + DRF + Django </h3>
+                                <h4 class="steps">HomeZen</h4>
+                                <h5 style="color:#909090;font-size:medium;">This real estate project that leverages Django REST API for the backend and React for the frontend. This project involves creating dynamic, responsive web applications for managing property listings, client interactions, and real-time updates in the real estate industry.
                                 </h5>
                                 <div class="wrapper blog-btn">
-                                    <a class="btn-hover" href="#blog-popup">Read More
+                                    <a class="btn-hover me-3" href="#blog-popup">View Live
                                         <svg class="btn-arrow-right" xmlns="http://www.w3.org/2000/svg" width="32"
                                             height="32" viewBox="0 0 32 32" fill="none">
                                             <path
                                                 d="M21.5621 14.6665L14.4101 7.51452L16.2957 5.62891L26.6666 15.9999L16.2957 26.3707L14.4101 24.4851L21.5621 17.3332H5.33331V14.6665H21.5621Z"
                                                 fill="#0F141C" />
                                         </svg>
+                                    </a>
+                                    <a class="btn-hover text-dark" href="#blog-popup">View Git
+                                        <img src="{% static 'images/svg/git.svg' %}" class="ms-2 text-dark" style="height: 92%;color:#fff !important;">
                                     </a>
                                 </div>
                             </div>
                         </div>
                         <div class="blog-main zoom_in">
-                            <div class="blog-img-section blog-img-section2">
-                                <p class="blog-date">15<span>APR</span></p>
+                            
+                            <div class="blog-img-section">
+                                <img  src="{% static 'images/real-estate1.png' %}" alt="flower" style="height:250px;width:330px;border-radius:20px;">
+                                
                             </div>
                             <div>
-                                <h3 class="post-date">15 April 2025 | GRAPHIC DESIGN</h3>
-                                <h4 class="steps">11 Best Logo Design Online & Offline Courses</h4>
-                                <h5 class="est">Lectus neque aliquet faucibus diam neque sapien rhoncus morbi viverra.
-                                    Sed lorem a eget nisi porttitor augue. Aenean consectetur tristique quisque risus.
-                                    Aliquet posuere quis pellentesque id eget nisi Ornare.
+                                <h3 class="post-date">20 April 2025 | React + DRF + Django </h3>
+                                <h4 class="steps">HomeZen</h4>
+                                <h5 style="color:#909090;font-size:medium;">This real estate project that leverages Django REST API for the backend and React for the frontend. This project involves creating dynamic, responsive web applications for managing property listings, client interactions, and real-time updates in the real estate industry.
                                 </h5>
                                 <div class="wrapper blog-btn">
-                                    <a class="btn-hover" href="#blog-popup">Read More
+                                    <a class="btn-hover me-3" href="#blog-popup">View Live
                                         <svg class="btn-arrow-right" xmlns="http://www.w3.org/2000/svg" width="32"
                                             height="32" viewBox="0 0 32 32" fill="none">
                                             <path
@@ -159,22 +203,25 @@
                                                 fill="#0F141C" />
                                         </svg>
                                     </a>
+                                    <a class="btn-hover text-dark" href="#blog-popup">View Git
+                                        <img src="{% static 'images/svg/git.svg' %}" class="ms-2 text-dark" style="height: 92%;color:#fff !important;">
+                                    </a>
                                 </div>
                             </div>
                         </div>
-                        <div class="blog-main mb-0 zoom_in">
-                            <div class="blog-img-section blog-img-section3">
-                                <p class="blog-date">10<span>APR</span></p>
+                        <div class="blog-main zoom_in  mb-0 zoom_in">
+                            
+                            <div class="blog-img-section">
+                                <img  src="{% static 'images/Food-Delivery-Apps-1.jpg' %}" alt="flower" style="height:250px;width:330px;border-radius:20px;">
+                                
                             </div>
                             <div>
-                                <h3 class="post-date">10 April 2025 | SEO</h3>
-                                <h4 class="steps">10 Content Proofreading Tips to Catch More</h4>
-                                <h5 class="est">Habitasse gravida vestibulum egestas dis quis mauris ut nulla quam.
-                                    Ultrices ac tincidunt mattis odio. Est morbi non posuere elementum luctus massa duis
-                                    consectetur duis. Convallis sit hac suspendisse mattis sit.
+                                <h3 class="post-date">20 April 2025 | React + DRF + Django </h3>
+                                <h4 class="steps">FoodKing</h4>
+                                <h5 style="color:#909090;font-size:medium;">This real estate project that leverages Django REST API for the backend and React for the frontend. This project involves creating dynamic, responsive web applications for managing property listings, client interactions, and real-time updates in the real estate industry.
                                 </h5>
                                 <div class="wrapper blog-btn">
-                                    <a class="btn-hover" href="#blog-popup">Read More
+                                    <a class="btn-hover me-3" href="#blog-popup">View Live
                                         <svg class="btn-arrow-right" xmlns="http://www.w3.org/2000/svg" width="32"
                                             height="32" viewBox="0 0 32 32" fill="none">
                                             <path
@@ -182,9 +229,14 @@
                                                 fill="#0F141C" />
                                         </svg>
                                     </a>
+                                    <a class="btn-hover text-dark" href="#blog-popup">View Git
+                                        <img src="{% static 'images/svg/git.svg' %}" class="ms-2 text-dark" style="height: 92%;color:#fff !important;">
+                                    </a>
                                 </div>
                             </div>
                         </div>
+                       
+                      
                     </section>
                     <!-- ====================================== Section Blogs End ===================================== -->
 
@@ -1052,67 +1104,8 @@
                     <!-- ====================================== Blogs PopUp End ===================================== -->
                     <!-- ====================================== Section Contact ===================================== -->
                     <section class="contact-section" id="contact" style="display:none;">
-                        <div class="heading-container">
-                            <h2 class="section-heading-text coding-skill-text fade_up">Get In Touch.</h2>
-                            <div class="line"></div>
-                        </div>
-                        <p class="services-product-text fade_up">TAKE A COFFEE & CHAT WITH ME</p>
-                        <div class="main-box-contact">
-                            <div class="contact-box-main zoom_in">
-                                <div class="mobile-icon-main">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
-                                        fill="none">
-                                        <path
-                                            d="M6 6H42C43.1046 6 44 6.89544 44 8V40C44 41.1046 43.1046 42 42 42H6C4.89544 42 4 41.1046 4 40V8C4 6.89544 4.89544 6 6 6ZM24.1212 23.3658L11.2944 12.4754L8.70556 15.5246L24.1462 28.6342L39.3088 15.5123L36.6912 12.4877L24.1212 23.3658Z"
-                                            fill="white" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p class="contact-email-text">EMAIL</p>
-                                    <p class="contact-email"><a href="sksuriyakannan@gmail.com">sksuriyakannan@gmail.com</a></p>
-                                </div>
-                            </div>
-                            <div class="contact-box-main zoom_in">
-                                <div class="mobile-icon-main">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48"
-                                        fill="none">
-                                        <path
-                                            d="M14 4H36C37.1046 4 38 4.89544 38 6V42C38 43.1046 37.1046 44 36 44H12C10.8954 44 10 43.1046 10 42V0H14V4ZM14 8V18H34V8H14Z"
-                                            fill="white" />
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p class="contact-email-text">PHONE</p>
-                                    <p class="contact-email"><a href="tel:+12345678899">+91 9514152359</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <form id="contact-form" method="POST">
-                            <!-- CSRF token (for Django security) -->
-                            {% csrf_token %}
-
-                            <div class="form-container">
-                                <div class="form">
-                                    <label for="name" class="form__label">NAME</label>
-                                    <input type="text" class="form__input" placeholder="Your name" id="name" required autocomplete="off">
-                                </div>
-                                <div class="form">
-                                    <label for="email" class="form__label">EMAIL</label>
-                                    <input type="email" class="form__input" placeholder="Your email" id="email" required autocomplete="off">
-                                </div>
-                            </div>
-                            <div class="form subject-input-main">
-                                <label for="subject" class="form__label">SUBJECT</label>
-                                <input type="text" class="form__input" placeholder="Your subject" id="subject" required autocomplete="off">
-                            </div>
-                            <div class="form">
-                                <label for="message" class="form__label">MESSAGE</label>
-                                <textarea class="form__input" placeholder="Write your text..." id="message" required autocomplete="off"></textarea>
-                            </div>
-                            <div class="wrapper blog-btn">
-                                <button type="submit" class="btn btn-hover">Submit Now</button>
-                            </div>
-                        </form>
+                        
+                    
                         <iframe class="mt-4" src="https://www.google.com/maps/embed?pb=!1m24!1m12!1m3!1d425.44012407724347!2d80.17990212348518!3d13.030203638722316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m9!3e6!4m3!3m2!1d13.030121!2d80.17993059999999!4m3!3m2!1d13.0301265!2d80.17990499999999!5e1!3m2!1sen!2sin!4v1730368493193!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 <!--                        <iframe class="map-iframe"-->
@@ -1129,42 +1122,30 @@
         </div>
     </div>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const form = document.getElementById('contact-form');
 
-            form.addEventListener('submit', function (e) {
-                e.preventDefault(); // Prevent default form submission
-
-                // Collect form data
-                const formData = new FormData(form);
-
-                // Send the data using the Fetch API
-                fetch('/contect/', {
-                    method: 'POST',
-                    body: formData, // Send the form data
-                    headers: {
-                        'X-CSRFToken': document.querySelector('[name=csrfmiddlewaretoken]').value // CSRF token
-                    }
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.status === 'success') {
-                        alert('Thank you for your message!');
-                        form.reset(); // Reset the form after submission
-                    } else {
-                        alert('Oops! Something went wrong.');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('An error occurred while submitting your message.');
-                });
-            });
-        });
+       
+        <script>
+            function redirectToAbout() {
+                // Redirects to the index page and automatically scrolls to the #about section
+                window.location.href = "{% url 'index' %}#about";
+            }
+            function redirectToHome() {
+                // Trigger click on the <a> inside the <li> to navigate
+                window.location.href = "{% url 'index' %}";
+            }
+            function redirectToResume() {
+                // Trigger click on the <a> inside the <li> to navigate
+                window.location.href = "{% url 'index' %}#resume";
+            }
+            function redirectToPortfolio() {
+                // Trigger click on the <a> inside the <li> to navigate
+                window.location.href = "{% url 'index' %}#portfolio";
+            }
+            function redirectToContact() {
+                // Trigger click on the <a> inside the <li> to navigate
+                window.location.href = "{% url 'index' %}#contact";
+            }
         </script>
-
-
 
     <script src="{% static 'javascript/jquery.min.js' %}"></script>
     <script src="{% static 'javascript/fancybox.min.js' %}"></script>

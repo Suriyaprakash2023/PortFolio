@@ -18,13 +18,16 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path
-from .views import index,submit_contact_form,react
+from .views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index,name='index'),
-    path('/submit_contact_form',submit_contact_form,name='submit_contact_form'),
-    path('react',react,name='react'),
+    path('submit_contact_form/',submit_contact_form,name='submit_contact_form'),
+    path('react/',react,name='react'),
+    path('django/',django,name='django'),
+    path('flask/',flask,name='flask'),
+    path('js/',js,name='js'),
 
 ]
 if settings.DEBUG:

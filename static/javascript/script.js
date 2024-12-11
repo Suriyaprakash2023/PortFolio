@@ -7,10 +7,10 @@ $(document).ready(function () {
 
 /*------------------------------------- Designer Text Animation -------------------------------------*/
 firstText = "Python Developer";
-secondText = "Developer";
-thridText = "React Developer"
+secondText = "React Developer";
+thridText = "Full stack Developer"
 fourthText = "Python Developer";
-fifthText = "Back-End Web Developer";
+fifthText = "Django Developer";
 sixthText = "Full stack Developer"
 intervalTime = 600;
 window.load = displayText();

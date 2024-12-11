@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.views.decorators.csrf import csrf_exempt
 from django.http import JsonResponse
-# from .models import Contact
+from app.models import Contact
 
 def index(request):
   return render(request,'index.html')

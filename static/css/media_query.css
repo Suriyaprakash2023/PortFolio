@@ -228,6 +228,8 @@
         width: 100%;
         max-width: 100%;
         background-position: top center;
+        display: flex !important;
+        justify-content: center !important;
     }
     .blog-main {
         display: flex;
