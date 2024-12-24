@@ -6,11 +6,11 @@ $(document).ready(function () {
 });
 
 /*------------------------------------- Designer Text Animation -------------------------------------*/
-firstText = "Designer";
-secondText = "Developer";
-thridText = "Freelancer"
-fourthText = "Freelancer";
-fifthText = "Back-End Web Developer";
+firstText = "Python Developer";
+secondText = "React Developer";
+thridText = "Full stack Developer"
+fourthText = "Python Developer";
+fifthText = "Django Developer";
 sixthText = "Full stack Developer"
 intervalTime = 600;
 window.load = displayText();
