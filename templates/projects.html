@@ -2,220 +2,296 @@
 {% load static %}
 
 <html lang="en">
-<style>
+  <style>
     .portfolios-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px; /* Adjust gap between items as needed */
-}
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px; /* Adjust gap between items as needed */
+    }
 
-.sm-12 {
-    /* Add any styles specific to each card item if needed */
-}
-
-</style>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    .sm-12 {
+      /* Add any styles specific to each card item if needed */
+    }
+  </style>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Biogi-Resume</title>
-    <link rel="icon" type="image/x-icon" href="{% static 'images/svg/favicon.svg' %}">
-    <link rel="stylesheet" href="{% static 'css/swap.css' %}">
-    <link rel="stylesheet" href="{% static 'css/fancybox.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/magnific-popup.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" href="{% static 'css/media_query.css' %}">
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{% static 'images/svg/favicon.svg' %}"
+    />
+    <link rel="stylesheet" href="{% static 'css/swap.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/fancybox.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/media_query.css' %}" />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-DL3ZFdZ3SH9u5I2EY4Z7Ijz9Pxl8tr6SxEKFEgHZ0iFz4LhIbM6tHRlS2tvcx95K" crossorigin="anonymous">
-
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      integrity="sha384-DL3ZFdZ3SH9u5I2EY4Z7Ijz9Pxl8tr6SxEKFEgHZ0iFz4LhIbM6tHRlS2tvcx95K"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
     <div class="site_contain">
-        <!-- ====================================== Preloader ===================================== -->
-        <div class="page-loader"><img src="{% static 'images/loader.gif' %}" alt="loader"></div>
-        <!-- ====================================== Preloader End ===================================== -->
-        <div class="fix-bg">
-            <div class="Ellipse1"></div>
-            <div class="Ellipse2"></div>
-            <button id="menu-toggle" class="menu-toggle-button">
-                <span class="hamburger" id="hamburger-1">
-                    <span class="line"></span>
-                    <span class="line"></span>
-                    <span class="line"></span>
-                </span>
-            </button>
-            <div class="container">
-                <!-- ====================================== Side Menu ===================================== -->
-                <div class="side-menu">
-                    <div class="profile-img-main">
-                        <img class="zoom_in" src="{% static 'images/profile-img.png' %}" alt="profile-img">
-                        <h1 class="fade_up">Suriya </h1>
-                        <h2 class="designer fade_up">Web Developer</h2>
-                        <div class="profile-media-icons-main fade_up">
-                            <a href="mailto:hello@biogi.com" class="profile-media-icons">
-                                <img src="{% static 'images/svg/email-svg.svg' %}" alt="email-svg">
-                            </a>
-                            <a target="_blank" href="https://github.com/Suriyaprakash2023" class="profile-media-icons" style="max-width: 60% !important;">
-                                <img src="{% static 'images/svg/git.svg' %}" alt="Behance Profile" style="width: 60%; max-width: 40px;" />
-                            </a>
-                            <a href="https://dribbble.com" class="profile-media-icons">
-                                <img src="{% static 'images/svg/drribale-svg.svg' %}"  alt="drribale-svg">
-                            </a>
-                            <a href="https://medium.com" class="profile-media-icons">
-                                <img src="{% static 'images/svg/medium-svg.svg' %}" alt="medium-svg">
-                            </a>
-                        </div>
-                    </div>
-                    <div class="menu-list-main">
-                        <ul>
-                            <li class="active-menu-action">
-                                <a class="fade_right" href="#home">
-                                    <img src="{% static 'images/svg/home-svg.svg' %}" alt="home-svg">Home
-                                </a>
-                            </li>
-                            <li class="active-menu-action">
-                                <a class="fade_right" href="#about">
-                                    <img src="{% static 'images/svg/about-svg.svg' %}" alt="home-svg">About
-                                </a>
-                            </li>
-                            <li class="active-menu-action">
-                                <a class="fade_right" href="#resume">
-                                    <img src="{% static 'images/svg/resume-svg.svg' %}" alt="home-svg">Resume
-                                </a>
-                            </li>
-                            <li class="active-menu-action">
-                                <a class="fade_right" href="#services">
-                                    <img src="{% static 'images/svg/services-svg.svg' %}" alt="home-svg">Services
-                                </a>
-                            </li>
-                            <li class="active-menu-action">
-                                <a class="fade_right" href="#portfolio">
-                                    <img src="{% static 'images/svg/portfolio-svg.svg' %}" alt="home-svg">Portfolio
-                                </a>
-                            </li>
-                            <li class="active-menu-action">
-                                <a class="fade_right" href="#pricing">
-                                    <img src="{% static 'images/svg/pricing-svg.svg' %}" alt="home-svg">Pricing
-                                </a>
-                            </li>
-                            <li class="active-menu-action">
-                                <a class="fade_right" href="#blog">
-                                    <img src="{% static 'images/svg/blog-svg.svg' %}" alt="home-svg">Blog
-                                </a>
-                            </li>
-                            <li class="active-menu-action" id="contact-line">
-                                <a class="fade_right" href="#contact">
-                                    <img src="{% static 'images/svg/contact-svg.svg' %}" alt="home-svg">Contact
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div>
-                        <div id="wrap">
-                            <a href="pdf/Resume.pdf" class="btn-slide">
-                                <span class="circle">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                        fill="none">
-                                        <path class="download-svg"
-                                            d="M13 12H16L12 16L8 12H11V8H13V12ZM15 4H5V20H19V8H15V4ZM3 2.9918C3 2.44405 3.44749 2 3.9985 2H16L20.9997 7L21 20.9925C21 21.5489 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5447 3 21.0082V2.9918Z"
-                                            fill="white" />
-                                    </svg>
-                                </span>
-                                <span class="title">Download CV</span>
-                                <span class="title-hover">Click Here</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- ====================================== Side Menu End ===================================== -->
-                <div class="main-containe" data-bs-spy="scroll">
-
-
-                    <!-- ====================================== Section Portfolio ===================================== -->
-                    <section class="portfolio-section " id="portfolio">
-                        <div class="heading-container">
-                            <h2 class="section-heading-text coding-skill-text fade_up">Portfolio.</h2>
-                            <div class="line"></div>
-                        </div>
-                        <div class="portfolios-group-main portfolios-grid ">
-                            <div>
-                                <div class=" image-container popup-btn zoom_in">
-                                    <img src="{% static 'images/content-img.png' %}" alt="content-img">
-                                    <div class="overlay">
-                                        <img src="{% static 'images/svg/content-svg.svg' %}" alt="vimeo-svg" class="vimeo-icon">
-                                        <p class="overlay-text">Corporate Branding</p>
-                                    </div>
-                                </div>
-                                <p class="Corporate zoom_in">Corporate Branding</p>
-                                <p class="Corporate-sub zoom_in">CONTENT</p>
-
-                            </div>
-                            <div>
-                                <div class=" image-container popup-btn zoom_in">
-                                    <img src="{% static 'images/content-img.png' %}" alt="content-img">
-                                    <div class="overlay">
-                                        <img src="{% static 'images/svg/content-svg.svg' %}" alt="vimeo-svg" class="vimeo-icon">
-                                        <p class="overlay-text">Corporate Branding</p>
-                                    </div>
-                                </div>
-                                <p class="Corporate zoom_in">Corporate Branding</p>
-                                <p class="Corporate-sub zoom_in">CONTENT</p>
-
-                            </div>
-                            <div>
-                                <div class=" image-container popup-btn zoom_in">
-                                    <img src="{% static 'images/content-img.png' %}" alt="content-img">
-                                    <div class="overlay">
-                                        <img src="{% static 'images/svg/content-svg.svg' %}" alt="vimeo-svg" class="vimeo-icon">
-                                        <p class="overlay-text">Corporate Branding</p>
-                                    </div>
-                                </div>
-                                <p class="Corporate zoom_in">Corporate Branding</p>
-                                <p class="Corporate-sub zoom_in">CONTENT</p>
-
-                            </div>
-                            <div>
-                                <div class=" image-container popup-btn zoom_in">
-                                    <img src="{% static 'images/content-img.png' %}" alt="content-img">
-                                    <div class="overlay">
-                                        <img src="{% static 'images/svg/content-svg.svg' %}" alt="vimeo-svg" class="vimeo-icon">
-                                        <p class="overlay-text">Corporate Branding</p>
-                                    </div>
-                                </div>
-                                <p class="Corporate zoom_in">Corporate Branding</p>
-                                <p class="Corporate-sub zoom_in">CONTENT</p>
-
-                            </div>
-
-
-                        </div>
-
-
-
-                    </section>
-                    <!-- ====================================== Section Portfolio End ===================================== -->
-
-                    <!-- ====================================== Section One ===================================== -->
-                    <section class="section-one overflow-hidden" id="home">
-                        <div class="row">
-                            <div class="col-xxl-6 col-lg-6 d-none">
-
-                                <h3 class="back-End-dev designer2"></h3>
-
-
-                            </div>
-
-                        </div>
-                    </section>
-                    <!-- ====================================== Section one End ===================================== -->
-
-
-
-
-                </div>
+      <!-- ====================================== Preloader ===================================== -->
+      <div class="page-loader">
+        <img src="{% static 'images/loader.gif' %}" alt="loader" />
+      </div>
+      <!-- ====================================== Preloader End ===================================== -->
+      <div class="fix-bg">
+        <div class="Ellipse1"></div>
+        <div class="Ellipse2"></div>
+        <button id="menu-toggle" class="menu-toggle-button">
+          <span class="hamburger" id="hamburger-1">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+          </span>
+        </button>
+        <div class="container">
+          <!-- ====================================== Side Menu ===================================== -->
+          <div class="side-menu">
+            <div class="profile-img-main">
+              <img
+                class="zoom_in"
+                src="{% static 'images/profile-img.png' %}"
+                alt="profile-img"
+              />
+              <h1 class="fade_up">Suriya</h1>
+              <h2 class="designer fade_up">Web Developer</h2>
+              <div class="profile-media-icons-main fade_up">
+                <a
+                  href="mailto:sksuriyakannan@gmail.com"
+                  class="profile-media-icons"
+                >
+                  <img
+                    src="{% static 'images/svg/email-svg.svg' %}"
+                    alt="email-svg"
+                  />
+                </a>
+                <a
+                  target="_blank"
+                  href="https://github.com/Suriyaprakash2023"
+                  class="profile-media-icons"
+                  style="max-width: 60% !important"
+                >
+                  <img
+                    src="{% static 'images/svg/git.svg' %}"
+                    alt="Behance Profile"
+                    style="width: 60%; max-width: 40px"
+                  />
+                </a>
+                <a href="https://dribbble.com" class="profile-media-icons">
+                  <img
+                    src="{% static 'images/svg/drribale-svg.svg' %}"
+                    alt="drribale-svg"
+                  />
+                </a>
+                <a href="https://medium.com" class="profile-media-icons">
+                  <img
+                    src="{% static 'images/svg/medium-svg.svg' %}"
+                    alt="medium-svg"
+                  />
+                </a>
+              </div>
             </div>
+            <div class="menu-list-main">
+              <ul>
+                <li class="active-menu-action">
+                  <a class="fade_right" href="#home">
+                    <img
+                      src="{% static 'images/svg/home-svg.svg' %}"
+                      alt="home-svg"
+                    />Home
+                  </a>
+                </li>
+                <li class="active-menu-action">
+                  <a class="fade_right" href="#about">
+                    <img
+                      src="{% static 'images/svg/about-svg.svg' %}"
+                      alt="home-svg"
+                    />About
+                  </a>
+                </li>
+                <li class="active-menu-action">
+                  <a class="fade_right" href="#resume">
+                    <img
+                      src="{% static 'images/svg/resume-svg.svg' %}"
+                      alt="home-svg"
+                    />Resume
+                  </a>
+                </li>
+                <li class="active-menu-action">
+                  <a class="fade_right" href="#services">
+                    <img
+                      src="{% static 'images/svg/services-svg.svg' %}"
+                      alt="home-svg"
+                    />Services
+                  </a>
+                </li>
+                <li class="active-menu-action">
+                  <a class="fade_right" href="#portfolio">
+                    <img
+                      src="{% static 'images/svg/portfolio-svg.svg' %}"
+                      alt="home-svg"
+                    />Portfolio
+                  </a>
+                </li>
+                <li class="active-menu-action">
+                  <a class="fade_right" href="#pricing">
+                    <img
+                      src="{% static 'images/svg/pricing-svg.svg' %}"
+                      alt="home-svg"
+                    />Pricing
+                  </a>
+                </li>
+                <li class="active-menu-action">
+                  <a class="fade_right" href="#blog">
+                    <img
+                      src="{% static 'images/svg/blog-svg.svg' %}"
+                      alt="home-svg"
+                    />Blog
+                  </a>
+                </li>
+                <li class="active-menu-action" id="contact-line">
+                  <a class="fade_right" href="#contact">
+                    <img
+                      src="{% static 'images/svg/contact-svg.svg' %}"
+                      alt="home-svg"
+                    />Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <div id="wrap">
+                <a href="pdf/Resume.pdf" class="btn-slide">
+                  <span class="circle">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                    >
+                      <path
+                        class="download-svg"
+                        d="M13 12H16L12 16L8 12H11V8H13V12ZM15 4H5V20H19V8H15V4ZM3 2.9918C3 2.44405 3.44749 2 3.9985 2H16L20.9997 7L21 20.9925C21 21.5489 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5447 3 21.0082V2.9918Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </span>
+                  <span class="title">Download CV</span>
+                  <span class="title-hover">Click Here</span>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- ====================================== Side Menu End ===================================== -->
+          <div class="main-containe" data-bs-spy="scroll">
+            <!-- ====================================== Section Portfolio ===================================== -->
+            <section class="portfolio-section" id="portfolio">
+              <div class="heading-container">
+                <h2 class="section-heading-text coding-skill-text fade_up">
+                  Portfolio.
+                </h2>
+                <div class="line"></div>
+              </div>
+              <div class="portfolios-group-main portfolios-grid">
+                <div>
+                  <div class="image-container popup-btn zoom_in">
+                    <img
+                      src="{% static 'images/content-img.png' %}"
+                      alt="content-img"
+                    />
+                    <div class="overlay">
+                      <img
+                        src="{% static 'images/svg/content-svg.svg' %}"
+                        alt="vimeo-svg"
+                        class="vimeo-icon"
+                      />
+                      <p class="overlay-text">Corporate Branding</p>
+                    </div>
+                  </div>
+                  <p class="Corporate zoom_in">Corporate Branding</p>
+                  <p class="Corporate-sub zoom_in">CONTENT</p>
+                </div>
+                <div>
+                  <div class="image-container popup-btn zoom_in">
+                    <img
+                      src="{% static 'images/content-img.png' %}"
+                      alt="content-img"
+                    />
+                    <div class="overlay">
+                      <img
+                        src="{% static 'images/svg/content-svg.svg' %}"
+                        alt="vimeo-svg"
+                        class="vimeo-icon"
+                      />
+                      <p class="overlay-text">Corporate Branding</p>
+                    </div>
+                  </div>
+                  <p class="Corporate zoom_in">Corporate Branding</p>
+                  <p class="Corporate-sub zoom_in">CONTENT</p>
+                </div>
+                <div>
+                  <div class="image-container popup-btn zoom_in">
+                    <img
+                      src="{% static 'images/content-img.png' %}"
+                      alt="content-img"
+                    />
+                    <div class="overlay">
+                      <img
+                        src="{% static 'images/svg/content-svg.svg' %}"
+                        alt="vimeo-svg"
+                        class="vimeo-icon"
+                      />
+                      <p class="overlay-text">Corporate Branding</p>
+                    </div>
+                  </div>
+                  <p class="Corporate zoom_in">Corporate Branding</p>
+                  <p class="Corporate-sub zoom_in">CONTENT</p>
+                </div>
+                <div>
+                  <div class="image-container popup-btn zoom_in">
+                    <img
+                      src="{% static 'images/content-img.png' %}"
+                      alt="content-img"
+                    />
+                    <div class="overlay">
+                      <img
+                        src="{% static 'images/svg/content-svg.svg' %}"
+                        alt="vimeo-svg"
+                        class="vimeo-icon"
+                      />
+                      <p class="overlay-text">Corporate Branding</p>
+                    </div>
+                  </div>
+                  <p class="Corporate zoom_in">Corporate Branding</p>
+                  <p class="Corporate-sub zoom_in">CONTENT</p>
+                </div>
+              </div>
+            </section>
+            <!-- ====================================== Section Portfolio End ===================================== -->
+
+            <!-- ====================================== Section One ===================================== -->
+            <section class="section-one overflow-hidden" id="home">
+              <div class="row">
+                <div class="col-xxl-6 col-lg-6 d-none">
+                  <h3 class="back-End-dev designer2"></h3>
+                </div>
+              </div>
+            </section>
+            <!-- ====================================== Section one End ===================================== -->
+          </div>
         </div>
+      </div>
     </div>
     <script src="{% static 'javascript/jquery.min.js' %}"></script>
     <script src="{% static 'javascript/fancybox.min.js' %}"></script>
@@ -223,5 +299,5 @@
     <script src="{% static 'javascript/slick.min.js' %}"></script>
     <script src="{% static 'javascript/bootstrap.bundle.min.js' %}"></script>
     <script src="{% static 'javascript/script.js' %}"></script>
-</body>
+  </body>
 </html>
