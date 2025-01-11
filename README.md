@@ -49,7 +49,7 @@ python manage.py runserver
 ### 6. Visit http://127.0.0.1:8000/ in your browser to view your portfolio locally.
 
 ### 📦 How to Contribute
-**Feel free to fork this repository and create pull requests if you have suggestions for improvements or new features! **
+Feel free to fork this repository and create pull requests if you have suggestions for improvements or new features! 
 
 - 1.Fork the repository.
 - 2.Create a new branch:
