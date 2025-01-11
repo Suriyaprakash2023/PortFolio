@@ -49,23 +49,23 @@ python manage.py runserver
 ### 6. Visit http://127.0.0.1:8000/ in your browser to view your portfolio locally.
 
 ### 📦 How to Contribute
-**Feel free to fork this repository and create pull requests if you have suggestions for improvements or new features!
+**Feel free to fork this repository and create pull requests if you have suggestions for improvements or new features! **
 
-1.Fork the repository.
-2.Create a new branch:
+- 1.Fork the repository.
+- 2.Create a new branch:
   ```git checkout -b feature-branch ```
-3.Make your changes.
-4.Commit your changes:
+- 3.Make your changes.
+- 4.Commit your changes:
 ```git commit -am 'Added new feature' ```
-5.Push to the branch:
+- 5.Push to the branch:
 ```git push origin feature-branch```
-6.Open a pull request.
+- 6.Open a pull request.
 ### 📧 Contact
 You can reach me via:
 
-Email: sksuriyakannan@gmail.com
-GitHub: <a href="https://github.com/Suriyaprakash2023">https://github.com/Suriyaprakash2023</a>
-LinkedIn: your-linkedin
+- Email: sksuriyakannan@gmail.com
+- GitHub: <a href="https://github.com/Suriyaprakash2023">https://github.com/Suriyaprakash2023</a>
+- LinkedIn: Suriyaprakash2023
 #### 🎯 License
 This project is licensed under the MIT License - see the <a href="https://github.com/Suriyaprakash2023/PortFolio/blob/main/LICENSE"> LICENSE </a> file for details.
 
