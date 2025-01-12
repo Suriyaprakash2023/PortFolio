@@ -1,5 +1,5 @@
 #media/
-media/
+# media/
 *.pyc
 .jpg
 .png
@@ -7,7 +7,7 @@ media/
 local_settings.py
 
 #Migration files
-*.sqlite3
+# *.sqlite3
 *.pyc
 migrations/
 
@@ -203,14 +203,16 @@ ehthumbs.db
 # Windows shortcuts
 *.lnk
 
-*.pyc
+__pycache__/
+.pyc
 *.pyc
 .DS_Store
 *.pyc
 *.pyc
 *.xml
-db.sqlite3
+# db.sqlite3
 
 
 
-db.json
+
+# db.json
