@@ -20,6 +20,24 @@
     <!-- Font Awesome CDN link (Free version) -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
+
+
+<style>
+
+@media screen and (max-width:320px) {
+
+    .image-container img{
+        width: 275px !important;
+        height: 300px !important;
+        border-radius: 20px;
+
+}
+
+}
+
+  
+    
+</style>
 </head>
 <body>
     <div class="site_contain">
@@ -537,82 +555,93 @@
                             <h2 class="section-heading-text coding-skill-text fade_up">Projects.</h2>
                             <div class="line"></div>
                         </div>
-                        <div class="portfolios-group-main">
-                            <div>
-                                <a href="{% url 'react' %}">
-                                
-                                    <div class="second-row-portfolio zoom_in">
-                                        <div class="image-container">
-                                            <img src="{% static 'images/youtube-video-img.png' %}" alt="youtube-video-img" style="width:320px;height:320px;">
-                                            <div class="overlay">
-                                                <img src="{% static 'images/svg/icons-django.png' %}" alt="youtube-svg"
-                                                    class="vimeo-icon">
-                                                <span style="font-size:x-large;font-weight: 600;color: #fff;">+</span>
-                                                    <img src="{% static 'images/svg/icons-react.png' %}" alt="youtube-svg"
-                                                    class="vimeo-icon">
-
-                                                <p class="overlay-text">React Development</p>
-                                            </div>
-                                        </div>
-                                    
-                                        <p class="Corporate-sub text-white">Django + DRF + React Projects</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="{% url 'django' %}">
-                                    <div class="second-row-portfolio zoom_in">
-
-                                        <div class="image-container">
-                                            <img src="{% static 'images/real-estate3.png' %}" alt="youtube-video-img" style="width:320px;height:320px;">
-                                            <div class="overlay">
-                                                <img src="{% static 'images/svg/icons-django1.png' %}" style="height:75px;width:75px;" alt="youtube-svg"
-                                                    class="vimeo-icon">
-                                                <p class="overlay-text">Django Development</p>
-                                            </div>
-                                        </div>
-                                    
-                                        <p class="Corporate-sub text-white"> Django Projects</p>
-                                    </div>
-                                </a>
-                            </div>
-                            
-
-                            <div>
-                                <a href="{% url 'flask' %}">
-                                    <div class="second-row-portfolio zoom_in">
-                                        <div class="image-container">
-                                            <img src="{% static 'images/tour2.jpg' %}" alt="youtube-video-img" style="width:320px;height:320px;">
-                                            <div class="overlay">
-                                                <img src="{% static 'images/svg/icons8-flask-500.png' %}" style="height:95px;width:95px;" alt="youtube-svg"
-                                                    class="vimeo-icon">
-                                                <p class="overlay-text">Flask Development</p>
-                                            </div>
-                                        </div>
-                                        <p class="Corporate-sub text-white"> Flask Projects</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <div>
-                                <a href="{% url 'js' %}">
-                                    <div class="second-row-portfolio zoom_in">
-                                        <div class="image-container">
-                                            <img src="{% static 'images/js1.jpg' %}" alt="youtube-video-img" style="width:320px;height:320px;">
-                                            <div class="overlay">
-                                                <img src="{% static 'images/svg/icons-javascript.png' %}" alt="youtube-svg"
-                                                    class="vimeo-icon">
-                                                <p class="overlay-text">JavaScript Development</p>
-                                            </div>
-                                        </div>
+                        <div class="">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div>
+                                        <a href="{% url 'react' %}">
                                         
-                                        <p class="Corporate-sub text-white">HTML + Css + Java Script Projects </p>
+                                            <div class="second-row-portfolio zoom_in">
+                                                <div class="image-container">
+                                                    <img  src="{% static 'images/youtube-video-img.png' %}" alt="youtube-video-img" style="width:320px;height:320px;border-radius:20px;">
+                                                    <div class="overlay">
+                                                        <img src="{% static 'images/svg/icons-django.png' %}" alt="youtube-svg"
+                                                            class="vimeo-icon">
+                                                        <span style="font-size:x-large;font-weight: 600;color: #fff;">+</span>
+                                                            <img src="{% static 'images/svg/icons-react.png' %}" alt="youtube-svg"
+                                                            class="vimeo-icon">
+
+                                                        <p class="overlay-text">React Development</p>
+                                                    </div>
+                                                </div>
+                                            
+                                                <p class="Corporate-sub text-white">Django + DRF + React Projects</p>
+                                            </div>
+                                        </a>
                                     </div>
-                                </a>
-                            </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div>
+                                        <a href="{% url 'django' %}">
+                                            <div class="second-row-portfolio zoom_in">
+
+                                                <div class="image-container">
+                                                    <img src="{% static 'images/real-estate3.png' %}" alt="youtube-video-img" style="width:320px;height:320px;border-radius:20px;">
+                                                    <div class="overlay">
+                                                        <img src="{% static 'images/svg/icons-django1.png' %}" style="height:75px;width:75px;" alt="youtube-svg"
+                                                            class="vimeo-icon">
+                                                        <p class="overlay-text">Django Development</p>
+                                                    </div>
+                                                </div>
+                                            
+                                                <p class="Corporate-sub text-white"> Django Projects</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                              
+                           
+                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div>
+                                        <a href="{% url 'flask' %}">
+                                            <div class="second-row-portfolio zoom_in">
+                                                <div class="image-container">
+                                                    <img src="{% static 'images/tour2.jpg' %}" alt="youtube-video-img" style="width:320px;height:320px;border-radius:20px;">
+                                                    <div class="overlay">
+                                                        <img src="{% static 'images/svg/icons8-flask-500.png' %}" style="height:95px;width:95px;" alt="youtube-svg"
+                                                            class="vimeo-icon">
+                                                        <p class="overlay-text">Flask Development</p>
+                                                    </div>
+                                                </div>
+                                                <p class="Corporate-sub text-white"> Flask Projects</p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                    <div class="col-lg-6 col-md-6 col-sm-12">
+                                    <div>
+                                        <a href="{% url 'js' %}">
+                                            <div class="second-row-portfolio zoom_in">
+                                                <div class="image-container">
+                                                    <img src="{% static 'images/js1.jpg' %}" alt="youtube-video-img" style="width:320px;height:320px;border-radius:20px;">
+                                                    <div class="overlay">
+                                                        <img src="{% static 'images/svg/icons-javascript.png' %}" alt="youtube-svg"
+                                                            class="vimeo-icon">
+                                                        <p class="overlay-text">JavaScript Development</p>
+                                                    </div>
+                                                </div>
+                                                
+                                                <p class="Corporate-sub text-white">HTML + Css + Java Script Projects </p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                               
+                                
                         </div>
-                        <div class="wrapper view-all-btn zoom_in">
-                            <a class="btn-hover" href="#">View All</a>
-                        </div>
+                    </div>
+                        
                     </section>
                     <!-- ====================================== Section Portfolio End ===================================== -->
                     <!-- ====================================== Content Pop up ===================================== -->
