@@ -16,6 +16,9 @@ from os import getenv
 from dotenv import load_dotenv
 from urllib.parse import urlparse
 
+load_dotenv()  # Load environment variables from .env
+
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -102,12 +105,23 @@ path = tmpPostgres.path.decode('utf-8') if isinstance(tmpPostgres.path, bytes) e
 # }
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'djongo',
+        'NAME': 'Suriyaportfolio',  # Use the actual database name
+        'CLIENT': {
+            'host': os.getenv('MONGO_URI'),  # Load URI from .env
+        }
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
